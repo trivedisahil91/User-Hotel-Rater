@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: SERVICEREGISTRY
+    # 👈 optional, but useful if you check logs or monitoring
+
+eureka:
+  client:
+    register-with-eureka: false   # 👈 Eureka server potane self-register nathi karto
+    fetch-registry: false         # 👈 koi biji registry mathi fetch nathi karto
