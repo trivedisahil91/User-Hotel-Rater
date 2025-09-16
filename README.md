@@ -64,16 +64,19 @@ User-Hotel-Rater/
 ````
 
 2. **Import services**
+
+   ```bash
    Import all **3 services** (`user-service`, `hotel-service`, `rating-service`) into your IDE (IntelliJ / Eclipse).
-
+````
 3. **Configure database**
+   ```bash
    Update `application.properties` in each service with your **MySQL username & password**.
-
-4. **Start services**
+````
+5. **Start services**
 
    ```bash
    mvn spring-boot:run
-   ```
+````
 
 ---
 
