@@ -1,0 +1,24 @@
+#spring.application.name=ConfigServer
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/trivedisahil91/microservice-project-config
+          default-label: main  # important
+          clone-on-start: true
+
+  application:
+    name: CONFIG-SERVER
+
+server:
+  port: 8085
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
