@@ -25,7 +25,7 @@ This project demonstrates how different services interact with each other using 
 |------------|---------|
 | ☕ **Java 17+ / Spring Boot** | Backend framework for microservices |
 | 🌐 **Spring Cloud** | Microservice communication & configuration |
-| 🗄 **MySQL** | Database for storing entities |
+| 🗄 **MySQL,MongoDB,PostgreSQL** | Database for storing entities |
 | 📦 **Maven** | Build & dependency management |
 | 🔗 **REST APIs** | Service-to-service communication |
 
@@ -72,7 +72,7 @@ User-Hotel-Rater/
    ```bash
    Update `application.properties` in each service with your **MySQL username & password**.
 ````
-5. **Start services**
+4. **Start services**
 
    ```bash
    mvn spring-boot:run
