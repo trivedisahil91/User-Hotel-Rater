@@ -1,12 +1,11 @@
-```markdown
 # 🌟 User-Hotel-Rater
 
-A **Microservices-based Project** for managing **Users**, **Hotels**, and their **Ratings**.  
-This project demonstrates how different services can interact with each other using REST APIs. 🚀  
+A **Microservices-based Project** for managing **Users 👤**, **Hotels 🏨**, and their **Ratings ⭐**.  
+This project demonstrates how different services interact with each other using **REST APIs**. 🚀  
 
 ---
 
-## 🏛 Architecture Overview
+## 🏛️ Architecture Overview
 
 ```
 
@@ -14,19 +13,21 @@ This project demonstrates how different services can interact with each other us
 
 ```
 
-- **👤 User Service** → Manages user details.  
-- **🏨 Hotel Service** → Manages hotel details and fetches hotel ratings.  
-- **⭐ Rating Service** → Manages ratings given by users to hotels.  
+- **👤 User Service** → Manages user details  
+- **🏨 Hotel Service** → Manages hotel details & fetches hotel ratings  
+- **⭐ Rating Service** → Manages ratings between users & hotels  
 
 ---
 
 ## ⚙️ Tech Stack
 
-- ☕ **Java 17+ / Spring Boot**  
-- 🌐 **Spring Cloud** (for microservices communication)  
-- 🗄 **MySQL** (Database)  
-- 📦 **Maven** (Build tool)  
-- 🔗 **REST APIs**  
+| Technology | Purpose |
+|------------|---------|
+| ☕ **Java 17+ / Spring Boot** | Backend framework for microservices |
+| 🌐 **Spring Cloud** | Microservice communication & configuration |
+| 🗄 **MySQL** | Database for storing entities |
+| 📦 **Maven** | Build & dependency management |
+| 🔗 **REST APIs** | Service-to-service communication |
 
 ---
 
@@ -36,10 +37,10 @@ This project demonstrates how different services can interact with each other us
 
 User-Hotel-Rater/
 │
-├── user-service/       👤 User Management
-├── hotel-service/      🏨 Hotel Management
-├── rating-service/     ⭐ Rating Management
-└── README.md
+├── user-service/       👤 Handles User Management
+├── hotel-service/      🏨 Handles Hotel Management
+├── rating-service/     ⭐ Handles Rating Management
+└── README.md           📘 Project Documentation
 
 ````
 
@@ -48,23 +49,27 @@ User-Hotel-Rater/
 ## 🚀 Getting Started
 
 ### ✅ Prerequisites
-Make sure you have installed:
 - Java 17+  
 - Maven 3+  
 - MySQL  
 
+---
+
 ### ▶️ Run Locally
-1. Clone the repo:  
+
+1. **Clone the repository**  
    ```bash
    git clone https://github.com/trivedisahil91/User-Hotel-Rater.git
    cd User-Hotel-Rater
 ````
 
-2. Import all **3 services** into your IDE (IntelliJ / Eclipse).
+2. **Import services**
+   Import all **3 services** (`user-service`, `hotel-service`, `rating-service`) into your IDE (IntelliJ / Eclipse).
 
-3. Configure **database** in each service’s `application.properties`.
+3. **Configure database**
+   Update `application.properties` in each service with your **MySQL username & password**.
 
-4. Start services one by one:
+4. **Start services**
 
    ```bash
    mvn spring-boot:run
@@ -74,27 +79,17 @@ Make sure you have installed:
 
 ## 🌐 Service Endpoints
 
-### 👤 User Service (default: `http://localhost:8081`)
-
-* `POST /users` → Create new user
-* `GET /users/{userId}` → Get user details
-
-### 🏨 Hotel Service (default: `http://localhost:8082`)
-
-* `POST /hotels` → Create new hotel
-* `GET /hotels/{hotelId}` → Get hotel details
-
-### ⭐ Rating Service (default: `http://localhost:8083`)
-
-* `POST /ratings` → Add new rating
-* `GET /ratings/user/{userId}` → Get ratings by user
-* `GET /ratings/hotel/{hotelId}` → Get ratings of a hotel
+| Service              | Port   | Endpoints                                                                             | Description          |
+| -------------------- | ------ | ------------------------------------------------------------------------------------- | -------------------- |
+| 👤 **User Service**  | `8081` | `POST /users` <br> `GET /users/{userId}`                                              | Manage user details  |
+| 🏨 **Hotel Service** | `8082` | `POST /hotels` <br> `GET /hotels/{hotelId}`                                           | Manage hotel details |
+| ⭐ **Rating Service** | `8083` | `POST /ratings` <br> `GET /ratings/user/{userId}` <br> `GET /ratings/hotel/{hotelId}` | Manage ratings       |
 
 ---
 
 ## 📌 Sample API Usage
 
-### ➕ Add User
+### 👤 Add User
 
 ```json
 POST /users
@@ -105,7 +100,7 @@ POST /users
 }
 ```
 
-### ➕ Add Hotel
+### 🏨 Add Hotel
 
 ```json
 POST /hotels
@@ -116,7 +111,7 @@ POST /hotels
 }
 ```
 
-### ➕ Add Rating
+### ⭐ Add Rating
 
 ```json
 POST /ratings
@@ -133,9 +128,9 @@ POST /ratings
 ## 🔮 Future Enhancements
 
 * 🛡 Add **JWT Authentication & Authorization**
-* 📊 API Gateway & Service Registry
-* 🐳 Docker + Kubernetes Deployment
-* 📈 Centralized Logging & Monitoring
+* 📊 Implement **API Gateway & Service Registry**
+* 🐳 Deploy with **Docker & Kubernetes**
+* 📈 Add **Centralized Logging & Monitoring**
 
 ---
 
@@ -143,9 +138,5 @@ POST /ratings
 
 **Sahil Trivedi**
 🔗 [GitHub Profile](https://github.com/trivedisahil91)
-
----
-
-```
 
 ---
